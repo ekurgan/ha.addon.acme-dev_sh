@@ -24,7 +24,7 @@ if [ -n "$SERVER" ]; then
     SERVER_ARG="--server $SERVER"
 fi
 
-OPTIONS=""
+OPTIONS_ARG=" "
 if [ -n "$OPTIONS" ]; then
     OPTIONS_ARG="$OPTIONS"
 fi
