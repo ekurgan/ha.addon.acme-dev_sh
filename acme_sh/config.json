@@ -3,7 +3,7 @@
   "version": "2.1.1",
   "slug": "acme_sh",
   "description": "Manage certificates with ACME.sh",
-  "url": "https://github.com/wernerhp/ha_addon_acme_sh",
+  "url": "https://github.com/ekurgan/ha.addon.acme-dev_sh",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "once",
   "boot": "manual",
@@ -15,7 +15,8 @@
     "domains": [null],
     "certfile": "fullchain.pem",
     "keyfile": "privkey.pem",
-    "dns": {}
+    "dns": {},
+    "options":""
   },
   "schema": {
     "account": "str",
@@ -26,6 +27,7 @@
     "dns": {
       "provider": "str",
       "env": ["str"]
-    }
+    },
+    "options": "str"
   }
 }
