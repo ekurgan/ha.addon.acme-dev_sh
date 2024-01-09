@@ -34,6 +34,7 @@ domains:
   - '*.my.domain.tld'
 certfile: fullchain.pem
 keyfile: privkey.pem
+options: <acme.sh options>
 dns:
   provider: dns_freedns
   env: 
