@@ -24,11 +24,16 @@ if [ -n "$SERVER" ]; then
     SERVER_ARG="--server $SERVER"
 fi
 
+OPTIONS=""
+if [ -n "$OPTIONS" ]; then
+    OPTIONS_ARG="$OPTIONS"
+fi
+
 /root/.acme.sh/acme.sh --register-account -m ${ACCOUNT} $SERVER_ARG
 
 /root/.acme.sh/acme.sh --issue "${DOMAIN_ARR[@]}" \
 --dns "$DNS_PROVIDER" \
-$OPTIONS $SERVER_ARG
+ $OPTIONS_ARG $SERVER_ARG
 
 /root/.acme.sh/acme.sh --install-cert "${DOMAIN_ARR[@]}" \
 --fullchain-file "/ssl/${CERTFILE}" \
